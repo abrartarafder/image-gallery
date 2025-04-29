@@ -20,7 +20,7 @@ a {
     min-height: 100vh;
     width: 100%;
     overflow: hidden;
-    background-color: #ffffff;
+    background-color: #000000;
 }
 
 #sidebar {
@@ -57,24 +57,22 @@ a {
     flex: 1 1 auto;
 }
 
-.sidebar-logo {
-    padding: 1.15rem 1.5rem;
-    text-align: center;
-}
-
-.sidebar-logo a {
-    color: #FFF;
-    font-weight: 800;
-    font-size: 1.5rem;
-}
-
 .sidebar-header {
-    color: #FFF;
+    color: #faa153;
     font-size: .75rem;
     padding: 1.5rem 1.5rem .375rem;
 }
 
 a.sidebar-link {
+    padding: .625rem 1.625rem;
+    color: white;
+    position: relative;
+    transition: all 0.35s;
+    display: block;
+    font-size: 1.25rem;
+}
+
+a.sidebar-link-active {
     padding: .625rem 1.625rem;
     color: #faa153;
     position: relative;
@@ -110,6 +108,11 @@ a.sidebar-link:hover {
 .text-body p{
     font-weight: 800;
     font-size: 35px;
+    color: white;
+}
+
+.container-fluid h1{
+    color: white;
 }
 
 /* Screen size less than 768px */
