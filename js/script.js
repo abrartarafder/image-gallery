@@ -1,23 +1,26 @@
-const toggler = document.querySelector(".toggler-btn");
-toggler.addEventListener("click", function () {
-  document.querySelector("#sidebar").classList.toggle("collapsed");
-});
-
-    // Roles to cycle through
-    const roles = [
-        'Software Developer',
-        'Graphic Designer',
-        'Web Designer',
-        'Computer Science Student',
-        'Data Analyst',
-        'Tech Enthusiast'
-    ];
-
-    // Initialize Typed.js
-    const type = new Typed('#roleDescription', {
-        strings: roles,
-        typeSpeed: 100,
-        backSpeed: 100,
-        backDelay: 1000,
-        loop: true
+// wait until everything is ready
+document.addEventListener('DOMContentLoaded', () => {
+    /* ---------- sidebar toggle (mobile) ---------- */
+    const sidebar    = document.getElementById('sidebar');
+    const sidebarBtn = document.querySelector('.toggler-btn');   // ← was null, now selects the button
+  
+    sidebarBtn.addEventListener('click', () => {
+      // toggle helper class for smooth width change
+      sidebar.classList.toggle('collapsed');
     });
+  
+    /* ---------- Typed.js header roles ---------- */
+    new Typed('#roleDescription', {
+      strings: [
+        'Software Developer',
+        'Web Designer',
+        'Computer Science Student'
+      ],
+      typeSpeed: 60,
+      backSpeed: 40,
+      backDelay: 1500,
+      loop: true,
+      smartBackspace: true
+    });
+  });
+  
